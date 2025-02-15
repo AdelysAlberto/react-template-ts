@@ -1,0 +1,42 @@
+{
+  "_chunk-IR6S3I6Y-0ihj1Wgf.js": {
+    "file": "assets/chunk-IR6S3I6Y-0ihj1Wgf.js",
+    "name": "chunk-IR6S3I6Y"
+  },
+  "_with-props-C5Yeyvd2.js": {
+    "file": "assets/with-props-C5Yeyvd2.js",
+    "name": "with-props",
+    "imports": [
+      "_chunk-IR6S3I6Y-0ihj1Wgf.js"
+    ]
+  },
+  "src/entry.client.tsx": {
+    "file": "assets/entry.client-pDsqQaAl.js",
+    "name": "entry.client",
+    "src": "src/entry.client.tsx",
+    "isEntry": true,
+    "imports": [
+      "_chunk-IR6S3I6Y-0ihj1Wgf.js"
+    ]
+  },
+  "src/pages/public/Login/index.tsx?__react-router-build-client-route": {
+    "file": "assets/index-Jmzab6WR.js",
+    "name": "index",
+    "src": "src/pages/public/Login/index.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_with-props-C5Yeyvd2.js",
+      "_chunk-IR6S3I6Y-0ihj1Wgf.js"
+    ]
+  },
+  "src/root.tsx?__react-router-build-client-route": {
+    "file": "assets/root-e2z_J_jZ.js",
+    "name": "root",
+    "src": "src/root.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_with-props-C5Yeyvd2.js",
+      "_chunk-IR6S3I6Y-0ihj1Wgf.js"
+    ]
+  }
+}

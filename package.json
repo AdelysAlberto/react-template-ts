@@ -1,0 +1,42 @@
+{
+  "name": "lottery-ryg",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev2": "react-router dev",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@react-router/node": "^7.1.5",
+    "@tanstack/react-query": "5.66.0",
+    "axios": "1.7.9",
+    "isbot": "^5",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-router": "7.1.5",
+    "zustand": "5.0.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@react-router/dev": "^7.1.5",
+    "@tanstack/eslint-plugin-query": "^5.66.1",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.23.0",
+    "@typescript-eslint/parser": "^8.23.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^9.20.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.18",
+    "globals": "^15.14.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.22.0",
+    "vite": "^6.1.0",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c"
+}
