@@ -11,8 +11,18 @@ Currently, two official plugins are available:
 
 This template using react router v7 
 
+*example Login using layout template*
+
 ```js
+import {
+  index,
+  layout
+} from "@react-router/dev/routes";
 
+export default [
+  layout("pages/layout/Public/index.tsx", [
+    index("pages/public/Login/index.tsx"),
+  ]),
 
-
+]; 
 ```
