@@ -27,7 +27,7 @@ export default [
 ]; 
 ```
 
-🛠️ Tech Stack 
+## 🛠️ Tech Stack 
 
 - **Node:** 20.14.0
 - **Package Manager**: pnpm@9.15.0
