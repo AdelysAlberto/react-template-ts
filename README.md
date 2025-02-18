@@ -1,6 +1,6 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This boilerplate template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
 
@@ -26,3 +26,16 @@ export default [
 
 ]; 
 ```
+
+## 🛠️ Tech Stack 
+
+- **Node:** 20.14.0
+- **Package Manager**: pnpm@9.15.0
+- **Frontend Framework:** React 19
+- **Language:** TypeScript
+- **Styling:** CSS Module
+- **State Management:** Zustand - 5.0
+- **Data Fetching:** TanStack React Query - 5.66
+- **Validations:**: Zod
+- **Routing:** React Router v7
+- **Notifications:** React Toastify
