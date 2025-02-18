@@ -8,5 +8,8 @@ export default defineConfig({
   server: {
     port: 3001,
     open: true
-  }
+  },
+  build: {
+    outDir: "build", // Asegúrese de que esto coincida con el directorio esperado
+  },
 });

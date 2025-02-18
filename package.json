@@ -5,13 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev2": "react-router dev",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build-rr": "react-router build",
+    "dev-rr": "react-router dev",
+    "start-rr": "react-router-serve ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
     "@react-router/node": "^7.1.5",
+    "@react-router/serve": "^7.1.5",
     "@tanstack/react-query": "5.66.0",
     "axios": "1.7.9",
     "isbot": "^5",

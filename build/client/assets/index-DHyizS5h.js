@@ -1,0 +1,1 @@
+import{w as t}from"./with-props-C5Yeyvd2.js";import{o,O as s}from"./chunk-IR6S3I6Y-0ihj1Wgf.js";const n="_body_12b1n_1",e={body:n},r=()=>o.jsx("div",{className:e.body,children:o.jsx(s,{})}),i=t(r);export{i as default};
