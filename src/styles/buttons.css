@@ -1,0 +1,276 @@
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
+  -webkit-appearance: button;
+  appearance: button
+}
+
+button {
+  font-family: inherit;
+}
+
+button:focus {
+  outline: none;
+}
+
+
+.btn {
+  display: inline-flex;
+  text-align: center;
+  min-height: 45px;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  position: relative;
+  min-width: 120px;
+  border-radius: 8px;
+
+  & button {
+    display: inline-block;
+    place-content: center;
+    background-color: transparent;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: none;
+    width: 100%;
+    padding: 0 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: inherit;
+  }
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn-container {
+  &:has(.btn:focus) {
+    outline: 2px solid var(--color-secondary);
+    border-radius: 4px;
+    outline-offset: 1px;
+  }
+}
+
+.btn-hidden {
+  display: none !important;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-primary-20);
+    color: var(--color-white);
+  }
+
+  &:active {
+    background-color: var(--color-primary-40);
+    color: var(--color-white);
+  }
+
+}
+
+.btn-secondary {
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-primary);
+
+  &:hover,
+  &:focus {
+    border-color: var(--color-primary-20);
+    background-color: var(--color-white);
+    color: var(--color-primary-20);
+  }
+
+  &:active {
+    border-color: var(--color-secondary-20);
+    background-color: var(--color-secondary-20);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    &>img {
+      filter: grayscale(100%);
+    }
+  }
+}
+
+
+.btn-danger {
+  color: var(--color-white);
+  background-color: var(--color-danger);
+
+  &:hover,
+  &:focus {
+    color: var(--color-white);
+    background-color: var(--color-danger-20);
+  }
+
+  &:active {
+    color: var(--color-white);
+    background-color: var(--color-danger);
+  }
+}
+
+.btn-disabled {
+  color: var(--color-gray-20);
+  background-color: var(--color-gray);
+  border: 1px solid var(--color-gray-20);
+
+  & button {
+    cursor: not-allowed !important;
+  }
+
+}
+
+
+.btn-link {
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-white);
+
+  &:hover {
+    border-color: var(--color-white);
+    background-color: var(--color-white);
+    color: theme-color('text-secondary-variant');
+  }
+}
+
+.btn-success {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
+}
+
+.btn-light {
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-primary);
+
+  &:hover {
+    border-color: theme-color('text-secondary-variant') !important;
+    background-color: var(--color-white);
+    color: theme-color('text-secondary-variant');
+  }
+}
+
+.btn-default {
+  border-color: var(--color-gray);
+  color: var(--color-gray);
+
+  &:hover {
+    color: var(--color-black);
+    background-color: var(--color-primary);
+  }
+}
+
+.btn-warning {
+  color: var(--color-white);
+  background-color: var(--color-danger);
+
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--color-gray);
+  }
+}
+
+
+.btn-info {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--color-black);
+  box-shadow: 0 0 0px 1000px white inset;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input:-moz-autofill {
+  -moz-text-fill-color: var(--color-black);
+  box-shadow: 0 0 0px 1000px white inset;
+  -moz-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input:-o-autofill {
+  -o-text-fill-color: var(--color-black);
+  box-shadow: 0 0 0px 1000px white inset;
+  -o-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input:-khtml-autofill {
+  -khtml-text-fill-color: var(--color-black);
+  box-shadow: 0 0 0px 1000px white inset;
+  -khtml-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input:focus:-webkit-autofill {
+  -webkit-text-fill-color: var(--color-black);
+  box-shadow: 0 0 0px 1000px white inset;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input:focus:-moz-autofill {
+  -moz-text-fill-color: var(--color-black);
+  box-shadow: 0 0 0px 1000px white inset;
+  -moz-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input:focus:-o-autofill {
+  -o-text-fill-color: var(--color-black);
+  box-shadow: 0 0 0px 1000px white inset;
+  -o-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input:focus:-khtml-autofill {
+  -khtml-text-fill-color: var(--color-black);
+  box-shadow: 0 0 0px 1000px white inset;
+  -khtml-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+input,
+input[type="text"],
+input::placeholder {
+  font-size: 14px !important;
+  background: none;
+}
+
+.input-numeric-range {
+  height: 35px;
+  box-sizing: border-box;
+}
+
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
