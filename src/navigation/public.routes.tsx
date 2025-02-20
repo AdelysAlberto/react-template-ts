@@ -5,7 +5,9 @@ import {
 
 export default [
   layout("pages/layout/Public/index.tsx", [
-    index("pages/public/Login/index.tsx"),
+    index("pages/public/Login/index.tsx", {
+
+    }),
   ]),
 
 ]; 
