@@ -8,9 +8,12 @@ import {
 } from "react-router";
 
 import type {Route} from "../.react-router/types/src/+types/root";
+import inputStyles from "./styles/_input.css?url";
 import _measure from "./styles/_measure.css?url";
 import button from "./styles/buttons.css?url";
 import stylesheet from "./styles/index.css?url";
+
+// eslint-disable-next-line react-refresh/only-export-components
 export const links: Route.LinksFunction = () => [
   {rel: "preconnect", href: "https://fonts.googleapis.com"},
   {
@@ -26,6 +29,7 @@ export const links: Route.LinksFunction = () => [
   {rel: "stylesheet", href: _measure},
   {rel: "stylesheet", href: button},
   {rel: "stylesheet", href: stylesheet},
+  {rel: "stylesheet", href: inputStyles},
 ];
 
 export function Layout({children}: {children: React.ReactNode}) {
