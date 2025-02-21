@@ -1,0 +1,112 @@
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--color-black);
+  box-shadow: 0 0 0px 1000px white inset;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input:-moz-autofill {
+  -moz-text-fill-color: var(--color-black);
+  box-shadow: 0 0 0px 1000px white inset;
+  -moz-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input:-o-autofill {
+  -o-text-fill-color: var(--color-black);
+  box-shadow: 0 0 0px 1000px white inset;
+  -o-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input:-khtml-autofill {
+  -khtml-text-fill-color: var(--color-black);
+  box-shadow: 0 0 0px 1000px white inset;
+  -khtml-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input:focus:-webkit-autofill {
+  -webkit-text-fill-color: var(--color-black);
+  box-shadow: 0 0 0px 1000px white inset;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input:focus:-moz-autofill {
+  -moz-text-fill-color: var(--color-black);
+  box-shadow: 0 0 0px 1000px white inset;
+  -moz-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input:focus:-o-autofill {
+  -o-text-fill-color: var(--color-black);
+  box-shadow: 0 0 0px 1000px white inset;
+  -o-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input:focus:-khtml-autofill {
+  -khtml-text-fill-color: var(--color-black);
+  box-shadow: 0 0 0px 1000px white inset;
+  -khtml-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+input,
+input[type="text"],
+input::placeholder {
+  font-size: 14px !important;
+  background: none;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.input {
+  border: 1px solid var(--color-gray);
+  border-radius: 6px;
+  padding: 12px 16px;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  width: 100%;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+
+  &.input-small {
+    width: 25%;
+  }
+
+  &.input-medium {
+    width: 50%;
+  }
+
+  &.input-large {
+    width: 100%;
+  }
+
+  .input-error {
+    font-size: 12px;
+    color: var(--color-danger);
+  }
+
+  & label {
+    font-size: 14px;
+    color: var(--color-black);
+    font-weight: 600;
+    padding-left: 5px;
+    margin-bottom: 8px;
+  }
+
+
+}
