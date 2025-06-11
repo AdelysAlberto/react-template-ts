@@ -1,28 +1,42 @@
 import Axios from "axios";
-import {privateApi} from "../../services/api/private.api.ts";
-import {getStorage, setStorage} from "../../store/localStorage.ts";
-import {configEnv} from "../configEnvs.ts";
+import { privateApi } from "../../services/api/private.api.ts";
+import { getStorage, setStorage } from "../../store/storage.ts";
+import { envs } from "../../utils/envs.ts";
 
 const privateInstance = Axios.create();
 
 privateInstance.interceptors.request.use(config => {
-  const {token} = getStorage(configEnv.SESSION_STORAGE);
+  type TToken = {
+    lang?: string;
+  };
+
+  const token = getStorage(envs.SESSION_STORAGE);
+  const lang = getStorage("@lang") as TToken;
+
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
     config.headers.set({
-      "Accept-Language": getStorage("@lang")?.lang || "en-US",
+      "Accept-Language": lang?.lang || "en-US",
       "Content-Type": "application/json",
     });
   }
   return config;
 });
 
+interface ISessionStorage {
+  token: string;
+  refreshToken: string;
+  userId: string;
+  appId: string;
+  lastAccess: string;
+}
+
 privateInstance.interceptors.response.use(
-  (response) => response,
-  async (err) => {
+  response => response,
+  async err => {
     const originalRequest = err.config;
 
-    const userSessionStorage = getStorage(configEnv.SESSION_STORAGE);
+    const userSessionStorage = JSON.parse(getStorage(envs.SESSION_STORAGE) ?? "{}") as ISessionStorage;
 
     if (err.response.status === 401 && !originalRequest._retry && userSessionStorage?.refreshToken) {
       originalRequest._retry = true;
@@ -35,13 +49,16 @@ privateInstance.interceptors.response.use(
           lastAccess: userSessionStorage.lastAccess,
         });
 
-        const {accessToken, refreshToken: newRefreshToken} = response.data;
+        const { accessToken, refreshToken: newRefreshToken } = response.data;
 
-        setStorage(configEnv.SESSION_STORAGE, {
-          ...userSessionStorage,
-          token: accessToken,
-          refreshToken: newRefreshToken
-        });
+        setStorage(
+          envs.SESSION_STORAGE,
+          JSON.stringify({
+            ...userSessionStorage,
+            token: accessToken,
+            refreshToken: newRefreshToken,
+          })
+        );
 
         // Update the header with the new token and try the original request again
         originalRequest.headers.Authorization = `Bearer ${accessToken}`;

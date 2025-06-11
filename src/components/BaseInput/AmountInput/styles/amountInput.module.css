@@ -1,0 +1,11 @@
+.readOnlyContainer {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &__amount {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #464f60;
+  }
+}

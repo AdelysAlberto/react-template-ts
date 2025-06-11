@@ -1,8 +1,8 @@
-import {IAxiosError} from "../../interfaces/http";
-import {destroyStorage} from "../../store/localStorage";
+import type { IAxiosError } from "../../interfaces/http";
+import { destroyStorage } from "../../store/storage";
 
 export const manageCatchError = (err: IAxiosError) => {
-  const {status, code, errorMessage} = err;
+  const { status, code, errorMessage } = err;
   const errorMessageResponse = errorMessage;
 
   if (status === 403) {
@@ -10,10 +10,10 @@ export const manageCatchError = (err: IAxiosError) => {
     destroyStorage();
     return "sessionExpired";
   }
-  
+
   if (code === "500") {
     return "internalServerError";
   }
 
-  return  errorMessageResponse;
+  return errorMessageResponse;
 };

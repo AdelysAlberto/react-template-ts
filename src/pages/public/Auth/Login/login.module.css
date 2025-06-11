@@ -1,0 +1,49 @@
+.container {
+  margin-top: 40px;
+  padding: 0 120px;
+  width: 100%;
+
+  @media (width <= 820px) {
+    padding: 0 24px;
+    width: 100%;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @media (width <= 820px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.marginTop {
+  margin-top: 24px !important;
+
+  @media (width <= 820px) {
+    margin-top: 16px !important;
+  }
+}
+
+.marginBottom {
+  margin-bottom: 24px !important;
+
+  @media (width <= 820px) {
+    margin-bottom: 16px !important;
+  }
+}
+
+.divider {
+  border-right: 1px solid var(--color-gray-3);
+  margin-right: 40px;
+  padding-right: 20px;
+
+  @media screen and (max-width: 820px) {
+    border-right: none;
+    margin-right: 0;
+    border-bottom: 1px solid var(--color-gray-3);
+    padding-bottom: 24px;
+  }
+}

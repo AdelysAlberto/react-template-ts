@@ -1,0 +1,15 @@
+export default {
+  fansity: "Fansity",
+  email: "Correo electrónico",
+  password: "Contraseña",
+  forgot_password: "¿Olvidaste tu contraseña?",
+  sign_in: "INICIAR SESIÓN",
+  sign_in_with: "O inicia sesión con",
+  google: "Google",
+  instagram: "Instagram",
+  sign_in_with_google: "Iniciar sesión con Google",
+  sign_in_with_instagram: "Iniciar sesión con Instagram",
+  not_have_an_account: "¿No tienes una cuenta?",
+  sign_up: "Regístrate",
+  HOME_INVALID_EMAIL_OR_PASSWORD: "Correo o contraseña inválidos\nPor favor ingresa un correo y contraseña correctos",
+};

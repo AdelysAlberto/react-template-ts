@@ -1,0 +1,55 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "vcs": {
+    "enabled": false,
+    "clientKind": "git",
+    "useIgnoreFile": false
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 180,
+    "attributePosition": "multiline"
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "useExhaustiveDependencies": "off",
+        "all": true,
+        "useImportExtensions": "off"
+      },
+      "a11y": {
+        "useValidAnchor": "off",
+        "useKeyWithClickEvents": "off",
+        "noLabelWithoutControl": "off",
+        "useSemanticElements": "off",
+        "useFocusableInteractive": "off"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "off"
+      },
+      "complexity": {
+        "noForEach": "off"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double",
+      "jsxQuoteStyle": "double",
+      "arrowParentheses": "asNeeded",
+      "trailingCommas": "es5",
+      "semicolons": "always"
+    }
+  },
+  "files": {
+    "ignore": ["node_modules/**/*", "dist", "nginx", "src/assets/**/*", ".react-router/**/*"],
+    "include": ["src/**/*"]
+  }
+}

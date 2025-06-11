@@ -1,0 +1,38 @@
+.container {
+  min-height: 56px;
+  height: fit-content;
+  background-color: var(--color-gray-6);
+  border: 1px solid var(--color-gray-3);
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+
+  margin: 24px 0;
+  max-width: 1200px;
+  width: fit-content;
+
+  & .container__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: -webkit-fill-available;
+    background-color: var(--color-error);
+    color: var(--color-gray-2);
+  }
+
+  & .container__text {
+    margin: 16px 16px;
+  }
+}
+
+@media (width <= 820px) {
+  .container {
+    margin: 16px 0;
+
+    & .container__text {
+      margin: 8px 16px;
+      align-content: center;
+    }
+  }
+}

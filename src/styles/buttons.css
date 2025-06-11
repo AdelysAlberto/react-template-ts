@@ -1,9 +1,9 @@
-[type=reset],
-[type=submit],
+[type="reset"],
+[type="submit"],
 button,
-html [type=button] {
+html [type="button"] {
   -webkit-appearance: button;
-  appearance: button
+  appearance: button;
 }
 
 button {
@@ -14,15 +14,25 @@ button:focus {
   outline: none;
 }
 
-
 .btn {
   display: inline-flex;
   text-align: center;
-  min-height: 45px;
+  min-height: 48px;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   position: relative;
-  min-width: 120px;
+  min-width: 90px;
+  width: 100%;
   border-radius: 8px;
+  white-space: normal;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+
+  & img {
+    margin: 0 0px;
+  }
 
   & button {
     display: inline-block;
@@ -49,6 +59,10 @@ button:focus {
 }
 
 .btn-container {
+  place-content: center;
+  display: inline-block;
+  position: relative;
+
   &:has(.btn:focus) {
     outline: 2px solid var(--color-secondary);
     border-radius: 4px;
@@ -74,13 +88,12 @@ button:focus {
     background-color: var(--color-primary-40);
     color: var(--color-white);
   }
-
 }
 
 .btn-secondary {
-  color: var(--color-primary);
-  background-color: var(--color-white);
-  border: 1px solid var(--color-primary);
+  color: var(--color-gray-6);
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
 
   &:hover,
   &:focus {
@@ -97,26 +110,51 @@ button:focus {
   &:hover,
   &:focus,
   &:active {
-    &>img {
+    & > img {
       filter: grayscale(100%);
     }
   }
 }
 
+.btn-tertiary {
+  color: var(--color-secondary);
+  background-color: var(--color-tertiary);
+  border: 1px solid var(--color-secondary);
+
+  &:hover,
+  &:focus {
+    border-color: var(--color-primary-20);
+    background-color: var(--color-white);
+    color: var(--color-primary-20);
+  }
+
+  &:active {
+    border-color: var(--color-secondary-20);
+    background-color: var(--color-secondary-20);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    & > img {
+      filter: grayscale(100%);
+    }
+  }
+}
 
 .btn-danger {
   color: var(--color-white);
-  background-color: var(--color-danger);
+  background-color: var(--color-error);
 
   &:hover,
   &:focus {
     color: var(--color-white);
-    background-color: var(--color-danger-20);
+    background-color: var(--color-error-20);
   }
 
   &:active {
     color: var(--color-white);
-    background-color: var(--color-danger);
+    background-color: var(--color-error);
   }
 }
 
@@ -128,9 +166,7 @@ button:focus {
   & button {
     cursor: not-allowed !important;
   }
-
 }
-
 
 .btn-link {
   color: var(--color-primary);
@@ -140,7 +176,7 @@ button:focus {
   &:hover {
     border-color: var(--color-white);
     background-color: var(--color-white);
-    color: theme-color('text-secondary-variant');
+    color: var(--color-primary);
   }
 }
 
@@ -160,9 +196,9 @@ button:focus {
   border: 1px solid var(--color-primary);
 
   &:hover {
-    border-color: theme-color('text-secondary-variant') !important;
+    border-color: var(--color-secondary-variant) !important;
     background-color: var(--color-white);
-    color: theme-color('text-secondary-variant');
+    color: var(--color-secondary-variant);
   }
 }
 
@@ -178,14 +214,13 @@ button:focus {
 
 .btn-warning {
   color: var(--color-white);
-  background-color: var(--color-danger);
+  background-color: var(--color-error);
 
   &:hover {
     color: var(--color-white);
     background-color: var(--color-gray);
   }
 }
-
 
 .btn-info {
   color: var(--color-white);

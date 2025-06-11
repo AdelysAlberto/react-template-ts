@@ -13,7 +13,6 @@ dist-ssr
 *.local
 build
 
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -24,3 +23,8 @@ build
 *.njsproj
 *.sln
 *.sw?
+.qodo
+.react-router
+
+copilot-instructions
+.github/copilot-instructions.md

@@ -1,41 +1,110 @@
-# React + TypeScript + Vite
 
-This boilerplate template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+````markdown
+# 🚀 Template React 19 - React router 7
 
-Currently, two official plugins are available:
+**Template React 19 - React router 7** 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> 🧠 Built with performance, scalability, and a clean architecture in mind.
 
-## Using React Router v7
+---
 
-This template using react router v7 
+## 🛠️ Tech Stack
 
-*example Login using layout template*
+- ⚛️ **React 19** – UI core with modern features
+- 🌐 **React Router 7** – File-based routing + loader architecture
+- 🧠 **Zustand** – Global state management (light and scalable)
+- ✅ **Zod** – Runtime schema validation
+- 🧰 **Vite 6** – Lightning-fast dev/build tool
+- 🌎 **i18next** – Internationalization
+- 📦 **Axios** – Typed HTTP client
+- 🧪 **Vitest** – Unit testing
+- 🧼 **Biome** – Lint + format
+- 📱 **PWA Ready** – with `vite-plugin-pwa`
+- 🌐 **TypeScript** – Fully typed
 
-```js
-import {
-  index,
-  layout
-} from "@react-router/dev/routes";
+---
 
-export default [
-  layout("pages/layout/Public/index.tsx", [
-    index("pages/public/Login/index.tsx"),
-  ]),
+## 🚧 Project Structure
 
-]; 
+```
+src/
+├── app/                # React Router file-based routes
+├── components/         # Shared UI components
+├── stores/             # Zustand slices
+├── hooks/              # Custom hooks
+├── lib/                # Utilities (api, auth, i18n, etc.)
+├── types/              # Global TypeScript types
+└── styles/             # CSS Modules
 ```
 
-## 🛠️ Tech Stack 
+---
 
-- **Node:** 20.14.0
-- **Package Manager**: pnpm@9.15.0
-- **Frontend Framework:** React 19
-- **Language:** TypeScript
-- **Styling:** CSS Module
-- **State Management:** Zustand - 5.0
-- **Data Fetching:** TanStack React Query - 5.66
-- **Validations:**: Zod
-- **Routing:** React Router v7
-- **Notifications:** React Toastify
+## 🖥️ Getting Started
+
+### 📦 Install dependencies
+
+```
+pnpm install
+```
+
+### 🧪 Start in development mode
+
+```
+pnpm dev
+```
+
+### 🛠 Build for production
+
+```
+pnpm build
+```
+
+### 🚀 Preview production build
+
+```
+pnpm preview
+```
+
+---
+
+## 🌐 Progressive Web App
+
+Template React 19 - React router 7 is PWA-ready. It includes:
+
+* Service Worker with `autoUpdate`
+* Custom manifest
+* Offline fallback support
+
+You can install the app on Android, iOS, or desktop.
+
+---
+
+## 🤝 Contributing
+
+1. Clone the repo
+2. Create a new feature branch: `feat/your-feature`
+3. Use `pnpm fix` to format/lint
+4. Open a PR
+
+---
+
+## 📄 License
+
+MIT © [Adelys Belén](mailto:adalbeca@msn.com) 
+
+---
+
+## 💡 About the Project
+
+Template React 19 - React router 7 was born as a modern alternative to platforms like OnlyFans and TikTok, with a twist:
+
+* Full control over LiveStream
+* Elegant monetization system (tips, coins, gifts)
+* Real-time interactions
+* Latin American market focus 🇻🇪
+
+---
+
+> *“More than just fans. It’s your world, your show, your Template React 19 - React router 7.”*
+
+```

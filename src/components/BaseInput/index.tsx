@@ -1,48 +1,62 @@
 import React from "react";
+import type { IBaseInput } from "./Input/baseInput.types";
+import Input from "./Input/index";
 
-interface BaseInputProps {
-  label?: string;
-  id?: string;
-  type?: string;
-  placeholder?: string;
-  value?: string;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  className?: string;
-  disabled?: boolean;
-  size?: "small" | "medium" | "large";
-  error?: string
-}
-
-const BaseInput: React.FC<BaseInputProps> = ({
-  label,
-  id,
-  type = "text",
-  placeholder,
-  value,
-  onChange,
-  className = "",
-  disabled = false,
-  size = "large",
-  error,
-}) => {
-  return (
-    <div className={`input-container input-${size} ${className}`}>
-      {label && <label className="input-label" htmlFor={id}>{label}</label>}
-
-      <input
-        type={type}
-        id={id}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-        className={`input ${error ? "mb-1" : ""}`}
-        disabled={disabled}
-      />
-
-      {error && <span className="input-error">{error}</span>}
-
-    </div>
-  );
+type InputObject = {
+  [key in NonNullable<IBaseInput["type"]>]: React.ReactElement;
 };
+
+const InputContainer = (props: IBaseInput) => {
+  const inputs: InputObject = {
+    text: (
+      <Input
+        type="text"
+        {...props}
+      />
+    ),
+    number: (
+      <Input
+        type="number"
+        {...props}
+      />
+    ),
+    password: (
+      <Input
+        type="password"
+        {...props}
+      />
+    ),
+    textArea: (
+      <Input
+        type="textArea"
+        {...props}
+      />
+    ),
+    textAreaPassword: (
+      <Input
+        type="textAreaPassword"
+        {...props}
+      />
+    ),
+    date: (
+      <Input
+        type="date"
+        {...props}
+      />
+    ),
+    email: (
+      <Input
+        type="email"
+        placeholder="example@domain.com"
+        {...props}
+      />
+    ),
+    range: <></>,
+  };
+
+  return inputs[props?.type ?? "text"];
+};
+
+const BaseInput = React.memo(InputContainer);
 
 export default BaseInput;

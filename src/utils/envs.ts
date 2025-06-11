@@ -1,0 +1,30 @@
+const {
+  VITE_APP_TITLE = "Template",
+  VITE_FACEBOOK_URL = "",
+  VITE_INSTAGRAM_URL = "",
+  VITE_TWITTER_URL = "",
+  VITE_TIKTOK_URL = "",
+  VITE_EMAIL = "",
+  VITE_API_URL = "http://localhost:3002",
+  VITE_GA_MEASUREMENT_ID = "",
+} = import.meta.env;
+
+const envs = {
+  callerAppId: "MyApp",
+  TITLE: VITE_APP_TITLE,
+  FACEBOOK_URL: VITE_FACEBOOK_URL,
+  INSTAGRAM_URL: VITE_INSTAGRAM_URL,
+  TWITTER_URL: VITE_TWITTER_URL,
+  TIKTOK_URL: VITE_TIKTOK_URL,
+  EMAIL: VITE_EMAIL,
+  SESSION_STORAGE: "template-storage",
+  API_URL: VITE_API_URL,
+  GA_MEASUREMENT_ID: VITE_GA_MEASUREMENT_ID,
+  API: {
+    VERSION_V1: "v1",
+    BASE_URL: VITE_API_URL,
+  },
+};
+
+export {envs};
+

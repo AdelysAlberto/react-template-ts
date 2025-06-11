@@ -1,38 +1,53 @@
-/* 
- Create variables colors primary, secondary, using css variables
-*/
+@import "tailwindcss";
+@import "./_resets.css";
+@import "./_measure.css";
+@import "./buttons.css";
+@import "./_input.css";
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html,
+:host {
+  line-height: 1.5;
+  tab-size: 4;
+  font-feature-settings: var(--default-font-feature-settings, normal);
+  font-variation-settings: var(--default-font-variation-settings, normal);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
 }
 
-
 :root {
-  --color-primary: #003cbd;
-  --color-primary-20: #3b60b1;
-  --color-primary-40: #4096ff;
-  --color-secondary: #FADD03;
-  --color-secondary-20: #fbed84;
+  view-transition-name: root;
+  --color-primary: #6d54b5;
+  --color-primary-variant: #3c364c;
+  --color-primary-20: #846dc7;
+  --color-primary-40: #3c364c;
+
+  --color-secondary: #236fa6;
+  --color-secondary-variant: #0084db;
+  --color-secondary-20: #5fa9ff;
   --color-secondary-40: #f8e7b0;
-  --color-gray: #E4E4E4;
-  --color-gray-20: #b1adad;
-  --color-gray-40: #d8d5d5;
-  --color-white: #FFFFFF;
-  --color-black: #2b2b2b;
-  --color-danger: #d90808;
-  --color-danger-20: #f33e3e;
 
+  --color-tertiary: #edf1f8;
 
-  font-family: "Roboto";
+  --color-gray: #e4e4e4;
+  --color-gray-1: #323232;
+  --color-gray-2: #555555;
+  --color-gray-3: #808080;
+  --color-gray-4: #cccccc;
+  --color-gray-5: #f2f4f7;
+  --color-gray-6: #ffffff;
+
+  --color-white: #ffffff;
+  --color-black: #131313;
+  --color-error: #bc3832;
+  --color-warning: #ff5623;
+  --background: #2b2832;
+  --color-success: #06893a;
+
+  font-family: "Source Sans Pro", serif;
   font-style: normal;
 
   color-scheme: light dark;
-  color: #2b2b2b;
-  background-color: #242424;
+  color: var(--color-gray-1);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -40,28 +55,45 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+[data-theme="dark"] {
+  --color-primary: #210d3f;
+  --color-primary-variant: #2f1851;
+
+  --color-secondary: #5fa9ff;
+  --color-secondary-variant: #8cc7f3;
+  --color-secondary-20: #5fa9ff;
+
+  --color-tertiary: #283038;
+
+  --background: #121212;
+  --text: #e0e0e0;
+  --color-warning: #d90808;
+  --color-white: #ffffff;
+  --color-error: #eb5640;
+  --color-success: #06893a;
+
+  --color-gray-1: #ffffff;
+  --color-gray-2: #cccccc;
+  --color-gray-3: #a0a0a0;
+  --color-gray-4: #555555;
+  --color-gray-5: #283038;
+  --color-gray-6: #323232;
+}
+
+.yellowtail-regular {
+  font-family: "Yellowtail", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.filter-error {
+  filter: invert(36%) sepia(19%) saturate(5428%) hue-rotate(336deg) brightness(76%) contrast(92%);
+}
+
 a {
   font-weight: 500;
-  color: #646cff;
   text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  color: var(--color-gray-6);
 }
 
 @media (prefers-color-scheme: light) {
@@ -75,26 +107,13 @@ h1 {
   }
 }
 
-.text-primary {
-  color: var(--color-primary);
-}
+.divider {
+  width: 2px;
+  height: 20px;
+  background-color: var(--color-white);
 
-.text-secondary {
-  color: var(--color-secondary);
-}
-
-.text-gray {
-  color: var(--color-gray);
-}
-
-.background-primary {
-  background-color: var(--color-primary);
-}
-
-.background-secondary {
-  background-color: var(--color-secondary);
-}
-
-.background-gray {
-  background-color: var(--color-gray);
+  @media (width <= 820px) {
+    height: 10px;
+    width: 1px;
+  }
 }

@@ -1,0 +1,32 @@
+.btn__default {
+  min-width: 90px;
+  width: fit-content;
+
+  @media (width <= 820px) {
+    width: 100%;
+  }
+}
+
+.btn__xs {
+  min-width: 4rem;
+  width: 4rem;
+}
+
+.btn__medium {
+  width: 50%;
+}
+
+.btn__large {
+  width: 100%;
+}
+
+.padding__default {
+  padding: 12px 24px;
+}
+
+.padding__icon_left {
+  padding: 10px 24px 10px 16px;
+}
+.padding__icon_right {
+  padding: 10px 16px 10px 24px;
+}
